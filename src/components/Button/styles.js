@@ -1,12 +1,12 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
-import { darken } from 'polished';
+import { lighten } from 'polished';
 
-import { primaryColor } from '../../util/consts';
+import { secundaryColor } from '../../util/consts';
 
 export const Container = styled(RectButton)`
   height: 50px;
-  background: ${darken(0.5, primaryColor)};
+  background: ${lighten(0.2, secundaryColor)};
   border-radius: 4px;
   align-items: center;
   justify-content: center;
