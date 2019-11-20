@@ -1,12 +1,22 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import { StatusBar } from 'react-native';
 
-// import { Container } from './styles';
+import './config/ReactotronConfig';
+import Routes from './routes';
 
-export default function App() {
+// import { store, persistor } from './store';
+
+const Index = () => {
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <Provider>
+      <PersistGate>
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+        <Routes />
+      </PersistGate>
+    </Provider>
   );
-}
+};
+
+export default Index;
